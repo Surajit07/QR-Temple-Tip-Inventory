@@ -28,6 +28,13 @@ app.use("/api/inventory", inventoryRoutes);
 app.use("/api", transactionRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server Running: http://localhost:${PORT}`);
+
+// --------LOCAL HOST -----------
+// app.listen(PORT, () => {
+//   console.log(`Server Running: http://localhost:${PORT}`);
+// });
+
+// --------SERVER----------
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server Running on Port ${PORT}`);
 });
